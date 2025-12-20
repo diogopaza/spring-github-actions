@@ -1,6 +1,63 @@
 # spring-github-actions
 
-ing Boot e GitHub Actions
+# 🧪 Exercício Prático — CI/CD com Spring Boot e GitHub Actions
+
+Este repositório contém um **exercício prático guiado**, dividido em **etapas**, para estudo de **CI/CD aplicado a aplicações Spring Boot**.
+
+O foco do exercício é aprender, na prática:
+- como criar testes automatizados em Spring MVC
+- como configurar pipelines de CI no GitHub Actions
+- como simular um fluxo real de desenvolvimento profissional
+
+> 🎯 **Importante**  
+> O objetivo não é regra de negócio, mas sim **lógica, testes e integração contínua**, como em projetos reais.
+
+---
+
+## 🎯 Objetivo Geral
+
+Construir uma aplicação Spring Boot simples que:
+
+1. Exponha um endpoint REST
+2. Possua teste automatizado
+3. Execute testes automaticamente ao abrir um Pull Request
+4. Execute build automaticamente ao fazer push na branch `main`
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- Java 17
+- Spring Boot 3
+- Spring Web (MVC)
+- Maven
+- JUnit 5
+- MockMvc
+- GitHub Actions
+
+---
+
+## 📦 Etapa 1 — Criação do Projeto
+
+### 🎯 Objetivo
+Criar o projeto base e garantir que ele compila corretamente.
+
+### 📌 Instruções
+Criar o projeto utilizando o **Spring Initializr**, com as configurações:
+
+- Project: Maven
+- Language: Java
+- Spring Boot: 3.x
+- Packaging: Jar
+- Java: 17
+- Dependencies:
+  - Spring Web
+
+### ✅ Critério de conclusão
+O comando abaixo deve executar sem erros:
+
+```bash
+mvn clean test
 
 Este repositório contém um **exercício prático guiado**, dividido em **etapas**, para estudo de **CI/CD aplicado a aplicações Spring Boot**.
 
