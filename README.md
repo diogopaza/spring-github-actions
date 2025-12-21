@@ -268,3 +268,81 @@ Teste automatizado funcional	3
 CI de testes em PR	2
 CI de build na main	1
 Total	10
+
+## 📊 Avaliação Final do Exercício
+
+### 🔹 Parte 1 — Projeto base funcional (2 pontos)
+
+**Explicação do aluno:**  
+_Descreva como o projeto foi criado (Spring Initializr, Java 17, dependências utilizadas, estrutura inicial do projeto, etc)._
+  Projeto criado com Spring Initializr usando as tecnologias pedidas. Grandes problemas com o Maven pois no prompt de comando do Windows eu tenho o Java 8 e baixei a ultima versao do Maven. Com isso nao consegui executar o comando mvn clean test, a solucao foi suar a interface grafica do Intellij onde o Maven usou o Java 17 configurado apra o projeto. Para finalizar o comando mvn clean test rodou sem erros conforme o definido para a Etapa 1. 
+
+**Nota do aluno:** `2/2`
+
+**Análise do avaliador:**  
+O projeto base foi criado corretamente utilizando o Spring Initializr, com Java 17 e estrutura padrão do Spring Boot. Apesar dos problemas iniciais relacionados ao Maven e à diferença de versões do Java (Java 8 no sistema e Java 17 no projeto), o aluno demonstrou boa capacidade de diagnóstico e resolução de problemas de ambiente. A execução do comando `mvn clean test` ocorreu com sucesso utilizando o Maven configurado pelo IntelliJ, validando que o projeto compila e que o contexto Spring sobe corretamente. A etapa atende completamente aos requisitos propostos.
+
+---
+
+### 🔹 Parte 2 — Endpoint implementado corretamente (2 pontos)
+
+**Explicação do aluno:**  
+_Explique qual endpoint foi criado, qual o caminho, método HTTP e o retorno esperado._
+
+**Nota do aluno:** `__/2`
+
+**Análise do avaliador:**  
+_(Avalia se o endpoint está correto, simples, funcional e seguindo boas práticas do Spring.)_
+
+---
+
+### 🔹 Parte 3 — Teste automatizado funcional (3 pontos)
+
+**Explicação do aluno:**  
+_Explique o tipo de teste utilizado (MockMvc, SpringBootTest, etc), o que ele valida e por que foi escolhido._
+
+**Nota do aluno:** `__/3`
+
+**Análise do avaliador:**  
+_(Avalia se o teste realmente valida o comportamento esperado e se está bem estruturado.)_
+
+---
+
+### 🔹 Parte 4 — CI de testes em Pull Request (2 pontos)
+
+**Explicação do aluno:**  
+_Explique quando a GitHub Action roda, em qual evento e quais comandos são executados._
+
+**Nota do aluno:** `__/2`
+
+**Análise do avaliador:**  
+_(Avalia se o CI é acionado corretamente no PR e se executa os testes.)_
+
+---
+
+### 🔹 Parte 5 — CI de build na branch `main` (1 ponto)
+
+**Explicação do aluno:**  
+_Explique quando essa action roda e qual o objetivo dela (build, validação, empacotamento, etc)._
+
+**Nota do aluno:** `__/1`
+
+**Análise do avaliador:**  
+_(Avalia se a action atende ao objetivo proposto e segue boas práticas.)_
+
+---
+
+### 🏁 Nota Final
+
+**Total máximo:** `10 pontos`
+
+**Nota final do aluno:** `__/10`
+
+**Nota final do avaliador:** `__/10`
+
+**Feedback geral do avaliador:**  
+_(Comentários finais sobre o projeto, organização, testes e CI/CD.)_
+
+
+
+    
