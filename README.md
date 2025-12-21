@@ -287,13 +287,12 @@ O projeto base foi criado corretamente utilizando o Spring Initializr, com Java 
 ### 🔹 Parte 2 — Endpoint implementado corretamente (2 pontos)
 
 **Explicação do aluno:**  
-_Explique qual endpoint foi criado, qual o caminho, método HTTP e o retorno esperado._
+Criacao de um controller (HealthController) e um model (HealthModel) para retornar o json pedido. O controller implementa o endpoint /health retornando o json. A classe HealthModel e imutavel pois usamos final no atributo desse modo o valor e definido na instanciacao e nao pode ser alterado, tambem usamos princnipios SOLID onde o S e de responsabilidade unica e o model simplesmente define um Health, sem mais features. O retorno foi um json nesse formamto == {"status":"UP"}.
 
-**Nota do aluno:** `__/2`
+**Nota do aluno:** `2/2`
 
 **Análise do avaliador:**  
-_(Avalia se o endpoint está correto, simples, funcional e seguindo boas práticas do Spring.)_
-
+O endpoint foi implementado de forma correta e funcional, utilizando `@RestController` e `@GetMapping` para expor o caminho `/health`. O retorno do JSON ocorre de maneira automática por meio da serialização do objeto `HealthModel`, demonstrando entendimento do funcionamento do Spring MVC. A decisão de tornar o modelo imutável, utilizando atributo `final` e inicialização via construtor, é adequada para um endpoint de leitura e reforça boas práticas de design. A separação entre controller e model segue o princípio de responsabilidade única (SRP), atendendo plenamente aos requisitos da etapa.
 ---
 
 ### 🔹 Parte 3 — Teste automatizado funcional (3 pontos)
