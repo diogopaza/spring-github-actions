@@ -1,13 +1,28 @@
 name: CI
 
 on: 
-  pullpull_request:
-    branchs: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
  testes:
-
     runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+          cache: 'maven'
+          
+      - name: Build e testes
+      - run: mvn clean test        
+
+        
 
 
 
