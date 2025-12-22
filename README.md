@@ -298,12 +298,19 @@ O endpoint foi implementado de forma correta e funcional, utilizando `@RestContr
 ### 🔹 Parte 3 — Teste automatizado funcional (3 pontos)
 
 **Explicação do aluno:**  
-_Explique o tipo de teste utilizado (MockMvc, SpringBootTest, etc), o que ele valida e por que foi escolhido._
+Foi utilizada a classe  ExercicioSpringGithubActionsApplicationTest pois essa ja foi criada pelo Spring MVC e ja realiza o teste de contexto tambem pedido na tarefa 3, atraves do metodo contextLoads(). Foi criado o teste testaEndpointHealth, usando MockMvc este que simula requisicoes http porem ser subir um servidor, tambem
+verificamos que o nosso teste e um teste de integracao da camada WEB da aplicacao. Com o comando mvn clean install obtivemos como saida o sucesso dos dois testes conforme
+definido na Etapa 3.
+ 
 
-**Nota do aluno:** `__/3`
+**Nota do aluno:** `2,5 / 3`
 
 **Análise do avaliador:**  
-_(Avalia se o teste realmente valida o comportamento esperado e se está bem estruturado.)_
+O teste automatizado valida corretamente o comportamento esperado do endpoint `/health`, utilizando o MockMvc para simular requisições HTTP sem a necessidade de subir um servidor real. A verificação do status HTTP (`200 OK`) e do conteúdo do JSON retornado (`{"status":"UP"}`) garante que o endpoint está funcional e responde conforme o contrato definido.
+
+A execução via `mvn clean test` resultou em sucesso, demonstrando que o projeto está corretamente configurado para execução de testes em ambiente de CI. Além disso, o teste `contextLoads()` valida a inicialização do contexto Spring, garantindo que a aplicação sobe sem erros.
+
+Como ponto de melhoria, o teste do endpoint foi implementado dentro de uma classe anotada com `@SpringBootTest`, o que caracteriza um teste de integração mais pesado. Para maior eficiência e aderência às boas práticas de CI/CD, seria recomendado utilizar `@WebMvcTest` em uma classe de teste específica para o controller, isolando a camada Web e reduzindo o tempo de execução dos testes.
 
 ---
 
