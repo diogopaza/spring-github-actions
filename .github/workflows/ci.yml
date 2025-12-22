@@ -20,7 +20,7 @@ jobs:
           cache: 'maven'
           
       - name: Build e testes
-      - run: mvn clean test        
+        run: mvn clean test        
 
         
 
