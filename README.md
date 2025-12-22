@@ -298,8 +298,10 @@ O endpoint foi implementado de forma correta e funcional, utilizando `@RestContr
 ### 🔹 Parte 3 — Teste automatizado funcional (3 pontos)
 
 **Explicação do aluno:**  
-Foi utilizada a classe  ExercicioSpringGithubActionsApplicationTest pois essa ja foi criada pelo Spring MVC e ja realiza o teste de contexto tambem pedido na tarefa 3, atraves do metodo contextLoads(). Foi criado o teste testaEndpointHealth, usando MockMvc este que simula requisicoes http porem ser subir um servidor, tambem
-verificamos que o nosso teste e um teste de integracao da camada WEB da aplicacao. Com o comando mvn clean install obtivemos como saida o sucesso dos dois testes conforme
+Foi utilizada a classe  ExercicioSpringGithubActionsApplicationTest pois essa ja foi criada pelo Spring MVC e ja realiza o teste de contexto tambem pedido na tarefa 3, atraves do metodo contextLoads().
+Foi criado o teste testaEndpointHealth, usando MockMvc este que simula requisicoes http porem ser subir um servidor,
+tambem verificamos que o nosso teste e um teste de integracao da camada WEB da aplicacao.
+Com o comando mvn clean install obtivemos como saida o sucesso dos dois testes conforme
 definido na Etapa 3.
  
 
