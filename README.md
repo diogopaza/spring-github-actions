@@ -325,7 +325,11 @@ Foi definido que em cada pull request na banch main o Github Actions deve ser ex
 **Nota do aluno:** `2 / 2`
 
 **Análise do avaliador:**  
-O workflow está corretamente configurado para disparar em pull requests na branch main. O arquivo ci.yml realiza todos os passos necessários: faz o checkout do código, configura o JDK 17 Corretto com cache do Maven e executa os testes definidos na Etapa 3 usando mvn clean test. A saída do GitHub Actions confirma que os testes foram executados com sucesso, sem falhas, resultando em BUILD SUCCESS. A explicação do aluno descreve corretamente o evento que dispara o workflow, os comandos executados e a função do arquivo ci.yml. Portanto, a implementação atende plenamente aos critérios da Parte 4.
+O workflow está corretamente configurado para disparar em pull requests na branch main. O arquivo ci.yml realiza todos os passos necessários:
+faz o checkout do código, configura o JDK 17 Corretto com cache do Maven e executa os testes definidos na Etapa 3 usando mvn clean test.
+ A saída do GitHub Actions confirma que os testes foram executados com sucesso, sem falhas, resultando em BUILD SUCCESS.
+A explicação do aluno descreve corretamente o evento que dispara o workflow, os comandos executados e a função do arquivo ci.yml.
+Portanto, a implementação atende plenamente aos critérios da Parte 4.
 ---
 
 ### 🔹 Parte 5 — CI de build na branch `main` (1 ponto)
