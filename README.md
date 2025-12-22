@@ -228,26 +228,6 @@ O foco é validar que o projeto compila corretamente
 ✅ Critério de conclusão
 A action executa automaticamente após push na main.
 
-📁 Estrutura Esperada do Projeto
-bash
-Copiar código
-spring-ci-exercicio
- ├── src
- │   ├── main
- │   │   └── java/com/exemplo/springciexercicio
- │   │       ├── SpringCiExercicioApplication.java
- │   │       └── controller
- │   │           └── HealthController.java
- │   └── test
- │       └── java/com/exemplo/springciexercicio
- │           └── HealthControllerTest.java
- ├── .github
- │   └── workflows
- │       ├── ci-tests.yml
- │       └── build.yml
- ├── pom.xml
- └── README.md
-🧠 Conceitos Trabalhados
 Testes automatizados em Spring MVC
 
 Uso de MockMvc para testar controllers
@@ -335,26 +315,22 @@ Portanto, a implementação atende plenamente aos critérios da Parte 4.
 ### 🔹 Parte 5 — CI de build na branch `main` (1 ponto)
 
 **Explicação do aluno:**  
-_Explique quando essa action roda e qual o objetivo dela (build, validação, empacotamento, etc)._
+O build do projeto e feito quando um push e enviado ao repositorio para a branch main. O arquivo build.yml e responsavel por gerenciar o fluxo, baixando o Java em sua versao definida, setando o Ubuntu como sistema padrao. E por fim executando o comando mvn clean package -DskipTests, comando que gera o .jar e nao realiza os testes, aqui o objetico e apenas o build.
 
 **Nota do aluno:** `__/1`
 
 **Análise do avaliador:**  
-_(Avalia se a action atende ao objetivo proposto e segue boas práticas.)_
-
+O workflow está corretamente configurado para rodar apenas em pushes na branch main e realiza o build do projeto conforme o esperado. O uso do comando mvn clean package -DskipTests garante que o artefato .jar seja gerado sem executar os testes, atendendo ao objetivo da etapa. O setup do JDK 17 e do cache do Maven segue boas práticas de CI, garantindo um build consistente e rápido. A saída do GitHub Actions confirma que o build foi realizado com sucesso (BUILD SUCCESS).
 ---
 
 ### 🏁 Nota Final
 
 **Total máximo:** `10 pontos`
 
-**Nota final do aluno:** `__/10`
-
-**Nota final do avaliador:** `__/10`
+**Nota final do aluno:** 9,5/10
 
 **Feedback geral do avaliador:**  
-_(Comentários finais sobre o projeto, organização, testes e CI/CD.)_
-
+O projeto está bem estruturado, com endpoints funcionais, testes automatizados e integração contínua corretamente configurada. O workflow de CI em PR executa os testes com sucesso, e o workflow de build gera o artefato .jar no push para a branch main. Pequenas melhorias poderiam ser feitas isolando testes de controller com @WebMvcTest para tornar o CI mais rápido, mas no geral o projeto atende plenamente aos objetivos e demonstra domínio das ferramentas Spring Boot, Maven e GitHub Actions.
 
 
     
