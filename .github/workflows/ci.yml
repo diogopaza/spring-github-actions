@@ -1,0 +1,13 @@
+name: CI
+
+on: 
+  pullpull_request:
+    branchs: ["main"]
+
+jobs:
+ testes:
+
+    runs-on: ubuntu-latest
+
+
+
