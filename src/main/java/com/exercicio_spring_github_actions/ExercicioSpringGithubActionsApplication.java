@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ExercicioSpringGithubActionsApplication {
 
 	public static void main(String[] args) {
-		System.out.println("protegendo a main");
+		System.out.println("protegendo a main 2");
 		SpringApplication.run(ExercicioSpringGithubActionsApplication.class, args);
 	}
 
